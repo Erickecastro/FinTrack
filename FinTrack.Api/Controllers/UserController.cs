@@ -16,10 +16,21 @@ public class UserController : ControllerBase
     }
 
     [HttpPost]
-    public IActionResult Create(CreateUserRequest request)
+    [ProducesResponseType(StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public IActionResult Create([FromBody] CreateUserRequest request)
     {
-        var result = _userService.Create(request);
+        var user = _userService.Create(request);
 
-        return Ok(result);
+        return Created(string.Empty, user);
+    }
+
+    [HttpGet]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public IActionResult GetAll()
+    {
+        var users = _userService.GetAll();
+
+        return Ok(users);
     }
 }
