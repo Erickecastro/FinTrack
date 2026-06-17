@@ -8,9 +8,9 @@ public class UserService
     {
         return new
         {
-            message = "User created successfully",
-            request.Name,
-            request.Email
+            Message = "User received successfully",
+            Name = request.Name,
+            Email = request.Email
         };
     }
 }

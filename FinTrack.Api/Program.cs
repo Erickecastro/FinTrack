@@ -1,3 +1,5 @@
+using FinTrack.Api.Services;
+
 namespace FinTrack.Api;
 
 public class Program
