@@ -8,6 +8,7 @@ public class Program
 
         // Services
         builder.Services.AddControllers();
+        builder.Services.AddScoped<UserService>();
 
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
