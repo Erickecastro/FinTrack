@@ -35,7 +35,7 @@ The project aims to help users manage income, expenses, and financial categories
 ## Roadmap
 
 * [x] Project initialization
-* [ ] Health check endpoint
+* [x] Health check endpoint
 * [ ] User management
 * [ ] JWT authentication
 * [ ] Categories management
